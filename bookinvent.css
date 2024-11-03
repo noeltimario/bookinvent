@@ -1,0 +1,219 @@
+/* General Styles */
+/* Resets margin and padding for all elements to ensure consistent styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Sets the default font for the body */
+    display: flex; /* Uses flexbox layout */
+    flex-direction: column; /* Arranges child elements in a column */
+    min-height: 100vh; /* Ensures the body takes up at least the full height of the viewport */
+}
+
+/* Background */
+/* Styles for the background div */
+.background {
+    position: absolute; /* Positions the background absolutely */
+    width: 100%; /* Full width */
+    height: 962px; /* Fixed height */
+    left: 0px; /* Aligns to the left */
+    top: 8px; /* Moves it down slightly */
+    background: #E3F2FD; /* Light blue background color */
+    z-index: -1; /* Places it behind other content */
+}
+
+/* Layout for Sidebar and Main Content */
+/* Defines the layout structure for sidebar and main content area */
+.layout {
+    display: flex; /* Uses flexbox for layout */
+    flex-grow: 1; /* Allows this section to grow and take available space */
+}
+
+/* Sidebar */
+/* Styles for the sidebar */
+.sidebar {
+    width: 250px; /* Fixed width for the sidebar */
+    background-color: #f0f8ff; /* Light blue background */
+    padding: 20px; /* Adds padding around the sidebar content */
+    display: flex; /* Uses flexbox for layout */
+    flex-direction: column; /* Arranges child elements in a column */
+    align-items: center; /* Centers child elements horizontally */
+    border-right: 1px solid #ccc; /* Adds a right border for separation */
+}
+
+.logo {
+    margin-bottom: 25px; /* Adds space below the logo */
+}
+
+/* Navigation Links */
+/* Styles for the navigation links in the sidebar */
+.nav-links ul {
+    list-style: none; /* Removes bullet points from the list */
+    padding: 0; /* Removes default padding */
+}
+
+.nav-links ul li {
+    margin: 20px 0; /* Adds space between list items */
+}
+
+.nav-links ul li a {
+    display: flex; /* Uses flexbox for alignment */
+    align-items: center; /* Centers items vertically */
+    text-decoration: none; /* Removes underline from links */
+    font-size: 18px; /* Sets font size */
+    color: #333; /* Sets text color */
+    padding: 10px; /* Adds padding around links */
+    border-radius: 6px; /* Rounds the corners */
+    transition: background-color 0.3s, color 0.3s; /* Adds transition effect on hover */
+}
+
+.nav-links ul li a:hover {
+    background-color: #dbeafe; /* Changes background on hover */
+    color: #007bff; /* Changes text color on hover */
+}
+
+/* Main Content */
+/* Styles for the main content area */
+.main-content {
+    flex-grow: 1; /* Allows the main content to grow and take available space */
+    padding: 20px; /* Adds padding around the main content */
+    position: relative; /* Positions relative to the parent */
+}
+
+/* Move the Book Inventory Down */
+/* Adds margin to the top of the inventory section */
+.book-inventory-wrapper {
+    margin-top: 30px; /* Adjust this value to move the inventory further down */
+}
+
+/* Header Styles */
+/* Styles for the header section within main content */
+header {
+    display: flex; /* Uses flexbox for layout */
+    justify-content: space-between; /* Space between header elements */
+    align-items: center; /* Centers items vertically */
+    margin-bottom: 20px; /* Adds space below the header */
+}
+
+header h1 {
+    font-size: 32px; /* Sets the font size for the title */
+}
+
+/* Search Bar Styles */
+/* Styles for the search bar */
+.search-bar {
+    width: 402px; /* Fixed width for the search bar */
+    height: 36px; /* Fixed height */
+    top: 151px; /* Positioning (not effective without relative/absolute parent) */
+    left: 994px; /* Positioning (not effective without relative/absolute parent) */
+    gap: 0px; /* Space between elements (not in use) */
+    border-radius: 7px 0px 0px 0px; /* Rounded corners (not in use) */
+    opacity: 0px; /* Hidden (set to 0 for visibility) */
+}
+
+.search-bar input {
+    padding: 8px; /* Adds padding inside the input */
+    font-size: 16px; /* Sets font size for input */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounds the corners */
+    width: 200px; /* Fixed width for input */
+    margin-right: 10px; /* Adds space between input and button */
+}
+
+.search-bar button {
+    padding: 8px 16px; /* Padding for button */
+    background-color: #007bff; /* Blue background for button */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounds the corners */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+.search-bar button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Book List Styles */
+/* Styles for the book list section */
+.book-list {
+    margin-top: 20px; /* Space above the book list */
+}
+
+.book-item {
+    display: flex; /* Uses flexbox for layout */
+    align-items: center; /* Centers items vertically */
+    background-color: white; /* White background for book items */
+    padding: 15px; /* Adds padding inside book item */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px; /* Rounds the corners */
+    margin-bottom: 10px; /* Space below each book item */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
+}
+
+.book-item img {
+    width: 60px; /* Fixed width for book cover images */
+    height: 90px; /* Fixed height for book cover images */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.book-info {
+    flex-grow: 1; /* Allows the book info section to grow */
+}
+
+.book-info h2 {
+    font-size: 20px; /* Sets font size for book title */
+    margin-bottom: 5px; /* Space below the title */
+}
+
+.book-info p {
+    font-size: 14px; /* Sets font size for book description */
+    color: #555; /* Dark gray text color */
+}
+
+/* Action Buttons */
+/* Styles for the action buttons in each book item */
+.actions {
+    display: flex; /* Uses flexbox for layout */
+    align-items: center; /* Centers items vertically */
+}
+
+.actions button {
+    background: none; /* No background for buttons */
+    border: none; /* No border */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    margin-left: 10px; /* Space to the left of buttons */
+}
+
+.actions .edit img, .actions .delete img {
+    width: 24px; /* Fixed width for edit/delete icons */
+    height: 24px; /* Fixed height for edit/delete icons */
+}
+
+/* Add Book Button */
+/* Styles for the "Add Book" button */
+.add-book {
+    margin-top: 20px; /* Space above the button */
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounds the corners */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+.add-book:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Footer */
+/* Styles for the footer */
+footer {
+    text-align: center; /* Centers text in footer */
+    padding: 20px; /* Padding around footer content */
+    background-color: #f0f8ff; /* Light blue background */
+    border-top: 1px solid #ccc; /* Top border */
+    margin-top: auto; /* Pushes footer to the bottom of the page */
+}
